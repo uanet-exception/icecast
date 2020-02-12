@@ -1,9 +1,13 @@
-[![Build Status](https://travis-ci.org/infiniteproject/icecast.svg?branch=master)](https://travis-ci.org/infiniteproject/icecast)
+[![Build Status](https://travis-ci.org/infiniteproject/icecast.svg?branch=master)](https://travis-ci.org/infiniteproject/icecast) 
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/mkody/icecast)](https://hub.docker.com/r/mkody/icecast)
+
 # icecast
-Icecast 2 for Docker
+> Icecast 2 for Docker
+
 ```
-docker run -d -p 8000:8000 infiniteproject/icecast
+docker run -d -p 8000:8000 mkody/icecast
 ```
+
 Supported ENV variables:
 
 ```
