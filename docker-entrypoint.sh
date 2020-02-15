@@ -27,8 +27,8 @@ fi
 if [ -n "$ICECAST_MAX_SOURCES" ]; then
     sed -i "s/<sources>[^<]*<\/sources>/<sources>$ICECAST_MAX_SOURCES<\/sources>/g" /etc/icecast.xml
 fi
-
-# Set UTF-8 charset by default
-sed -i 's/<mount type="default">/--><mount type="default"><charset>UTF-8<\/charset><\/mount><!--/g' /etc/icecast.xml
+if [ -n "$ICECAST_CHARSET" ]; then
+    sed -i -e ':a' -e 'N' -e '$!ba' -e 's/<!--[ \n]*<mount type="default">/<mount type="default"><charset>'"$ICECAST_CHARSET"'<\/charset><\/mount>\n<!--/g' /etc/icecast.xml
+fi
 
 exec "$@"
