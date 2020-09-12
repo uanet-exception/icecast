@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/infiniteproject/icecast.svg?branch=master)](https://travis-ci.org/infiniteproject/icecast) 
+[![Build Status](https://travis-ci.org/mkody/icecast.svg?branch=master)](https://travis-ci.org/mkody/icecast) 
 [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/mkody/icecast)](https://hub.docker.com/r/mkody/icecast)
 
 # icecast
