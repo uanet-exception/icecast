@@ -1,10 +1,9 @@
-FROM docker.io/library/alpine:3.18
-LABEL maintainer "gh@kdy.ch"
+FROM docker.io/library/alpine:3.19
 
 RUN addgroup -S icecast && \
     adduser -S icecast
-    
-RUN apk add --no-cache icecast mailcap
+
+RUN apk add --no-cache icecast~=2.4.4 mailcap
 
 COPY ./docker-entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
